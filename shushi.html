@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushi Nami - Premium Japanese Sushi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/background/background1.png');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .menu-item:hover .menu-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .menu-overlay {
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #ef4444;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .active-nav::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="assets/logo/logo.png" alt="Sushi Nami Logo" class="h-10 mr-2">
+                <span class="text-xl font-bold text-gray-800">Sushi Nami</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link active-nav text-gray-800 font-medium">Home</a>
+                <a href="#about" class="nav-link text-gray-800 font-medium">About</a>
+                <a href="#menu" class="nav-link text-gray-800 font-medium">Menu</a>
+                <a href="#testimonials" class="nav-link text-gray-800 font-medium">Testimonials</a>
+                <a href="#contact" class="nav-link text-gray-800 font-medium">Contact</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-full transition duration-300">
+                    <i class="fas fa-shopping-cart mr-2"></i>Order Now
+                </button>
+                <button class="md:hidden text-gray-800">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Rasakan Sensasi Sushi Premium, Fresh Setiap Hari</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Diolah oleh chef berpengalaman, disajikan dengan cinta ala Jepang modern.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-full text-lg font-medium transition duration-300">
+                    Lihat Menu
+                </button>
+                <button class="bg-white hover:bg-gray-100 text-red-500 px-8 py-3 rounded-full text-lg font-medium transition duration-300">
+                    Order Sekarang
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Kenapa Sushi Nami?</h2>
+                <div class="w-20 h-1 bg-red-500 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <img src="assets/background/about.png" 
+                         alt="Sushi Chef" 
+                         class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Gabungan Tradisi Jepang & Gaya Urban</h3>
+                    <p class="text-gray-600 mb-6">Sushi Nami menghadirkan pengalaman kuliner Jepang autentik dengan sentuhan modern yang segar. Setiap hidangan kami dibuat dengan bahan-bahan premium pilihan dan teknik tradisional yang telah disempurnakan oleh chef kami yang berpengalaman.</p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="flex items-start">
+                            <div class="bg-red-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-fish text-red-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Fresh Ingredients</h4>
+                                <p class="text-gray-600 text-sm">Bahan-bahan segar setiap hari dari pemasok terpercaya</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-red-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-utensils text-red-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Handmade Daily</h4>
+                                <p class="text-gray-600 text-sm">Dibuat dengan tangan oleh chef profesional</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-red-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-truck text-red-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Delivery Cepat</h4>
+                                <p class="text-gray-600 text-sm">Pengiriman cepat untuk menjaga kesegaran</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-red-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-star text-red-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">4.9 Star Rating</h4>
+                                <p class="text-gray-600 text-sm">Dibuktikan oleh ribuan pelanggan puas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Signature Menu</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Nikmati hidangan spesial kami yang dibuat dengan penuh dedikasi dan cita rasa autentik Jepang</p>
+                <div class="w-20 h-1 bg-red-500 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Menu Item 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 menu-item relative">
+                    <img src="assets/menu/salmon_aburi.png" 
+                         alt="Salmon Aburi" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Salmon Aburi</h3>
+                            <span class="text-red-500 font-bold">Rp 85.000</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Salmon segar dengan sentuhan torch yang sempurna</p>
+                    </div>
+                    <div class="menu-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
+                        <button class="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-full transition duration-300">
+                            Pesan Sekarang
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 menu-item relative">
+                    <img src="assets/menu/dragon_roll.png" 
+                         alt="Dragon Roll" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Dragon Roll</h3>
+                            <span class="text-red-500 font-bold">Rp 95.000</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Ebi tempura dengan lapisan avocado yang lembut</p>
+                    </div>
+                    <div class="menu-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
+                        <button class="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-full transition duration-300">
+                            Pesan Sekarang
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 menu-item relative">
+                    <img src="assets/menu/tamago_nigiri.png" 
+                         alt="Tamago Nigiri" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Tamago Nigiri</h3>
+                            <span class="text-red-500 font-bold">Rp 45.000</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Telur Jepang lembut di atas nasi sushi</p>
+                    </div>
+                    <div class="menu-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
+                        <button class="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-full transition duration-300">
+                            Pesan Sekarang
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 4 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 menu-item relative">
+                    <img src="assets/menu/tuna_shasimi.png" 
+                         alt="Tuna Sashimi" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Tuna Sashimi</h3>
+                            <span class="text-red-500 font-bold">Rp 120.000</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Potongan tuna segar premium dengan ketebalan sempurna</p>
+                    </div>
+                    <div class="menu-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
+                        <button class="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-full transition duration-300">
+                            Pesan Sekarang
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 5 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 menu-item relative">
+                    <img src="assets/menu/california_roll.png" 
+                         alt="California Roll" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">California Roll</h3>
+                            <span class="text-red-500 font-bold">Rp 65.000</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Kepiting, mentimun, dan alpukat dengan taburan tobiko</p>
+                    </div>
+                    <div class="menu-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
+                        <button class="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-full transition duration-300">
+                            Pesan Sekarang
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 6 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 menu-item relative">
+                    <img src="assets/menu/unagi_don.png" 
+                         alt="Unagi Don" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Unagi Don</h3>
+                            <span class="text-red-500 font-bold">Rp 110.000</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Bowl nasi dengan belut panggang saus teriyaki</p>
+                    </div>
+                    <div class="menu-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
+                        <button class="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-full transition duration-300">
+                            Pesan Sekarang
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-full text-lg font-medium transition duration-300">
+                    Lihat Menu Lengkap
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Apa Kata Pelanggan Kami</h2>
+                <div class="w-20 h-1 bg-red-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <img src="assets/user/user1.png" alt="Customer" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Sarah Wijaya</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Sushi di Sushi Nami benar-benar fresh dan rasanya autentik. Dragon Roll favorit saya! Pengiriman juga cepat, sushi masih dalam kondisi dingin saat sampai."</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <img src="assets/user/user2.png" alt="Customer" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Budi Santoso</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Sebagai orang yang sering ke Jepang, saya bisa bilang Sushi Nami adalah salah satu yang terbaik di Jakarta. Salmon Aburi mereka luar biasa!"</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <img src="assets/user/user3.png" alt="Customer" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Dewi Lestari</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Pilihan menu lengkap dan harga cukup reasonable untuk kualitas yang diberikan. Anak-anak saya suka sekali Tamago Nigiri mereka."</p>
+                </div>
+                
+                <!-- Testimonial 4 (Influencer) -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md testimonial-card md:col-span-2 lg:col-span-1">
+                    <div class="flex items-center mb-4">
+                        <img src="assets/user/user4.png" alt="Influencer" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Maya Fitriani</h4>
+                            <span class="text-xs bg-red-500 text-white px-2 py-1 rounded">Food Influencer</span>
+                            <div class="flex text-yellow-400 mt-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Setelah mencoba berbagai sushi di Jakarta, Sushi Nami adalah salah satu yang paling konsisten kualitasnya. Tuna Sashimi mereka benar-benar melt in your mouth!"</p>
+                </div>
+                
+                <!-- Testimonial 5 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <img src="assets/user/user5.png" alt="Customer" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Andi Pratama</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Unagi Don-nya enak banget! Sausnya pas tidak terlalu manis. Cocok untuk makan siang yang mengenyangkan tapi tetap sehat."</p>
+                </div>
+                
+                <!-- Testimonial 6 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <img src="assets/user/user6.png" alt="Customer" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Rina Hartono</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Saya pesan catering untuk acara kantor dan semua kolega memuji sushi dari Sushi Nami. Presentasinya juga elegan dan rapi."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-red-500 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Siap Menikmati Sushi Premium Kami?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Pesan sekarang dan dapatkan pengalaman kuliner Jepang terbaik di kota Anda</p>
+            <button class="bg-white hover:bg-gray-100 text-red-500 px-8 py-3 rounded-full text-lg font-medium transition duration-300">
+                <i class="fas fa-phone-alt mr-2"></i>Hubungi Kami
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <img src="https://via.placeholder.com/50" alt="Sushi Nami Logo" class="h-10 mb-4">
+                    <p class="text-gray-400">Sushi Nami menghadirkan sushi premium dengan cita rasa autentik Jepang dan sentuhan modern.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#menu" class="text-gray-400 hover:text-white transition">Menu</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition">Testimonials</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3"></i>
+                            <span>Jl. Sushi No. 123, Jakarta Selatan</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3"></i>
+                            <span>(021) 1234-5678</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>hello@sushinami.com</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Opening Hours</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex justify-between">
+                            <span>Senin - Jumat</span>
+                            <span>10:00 - 22:00</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Sabtu - Minggu</span>
+                            <span>10:00 - 23:00</span>
+                        </li>
+                    </ul>
+                    
+                    <h3 class="text-lg font-bold mt-6 mb-2">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Sushi Nami. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Update active navigation
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('active-nav');
+                });
+                this.classList.add('active-nav');
+            });
+        });
+        
+        // Mobile menu toggle (placeholder - would need more implementation)
+        document.querySelector('.md\\:hidden').addEventListener('click', function() {
+            alert('Mobile menu would open here in a full implementation');
+        });
+        
+        // Change active nav on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active-nav');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active-nav');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
