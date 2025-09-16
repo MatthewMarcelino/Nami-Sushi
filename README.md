@@ -1,26 +1,49 @@
-﻿# 🍣 Sushi Nami - Premium Japanese Sushi Website
+🥗 Sehat Diah Catering – Healthy & Fresh Catering Website
 
-[![Made with HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)]()
-[![Made with TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)]()
-[![Font Awesome](https://img.shields.io/badge/Font_Awesome-528DD7?style=for-the-badge&logo=fontawesome&logoColor=white)]()
-[![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge)]()
+Sehat Diah Catering adalah website resmi layanan catering sehat yang mengutamakan kualitas bahan, gizi seimbang, dan pelayanan profesional.
+Website ini dibuat menggunakan HTML5, Tailwind CSS, dan Font Awesome, dengan desain modern, responsif, dan user-friendly.
 
-Sushi Nami adalah website restoran Jepang modern yang menghadirkan pengalaman kuliner premium dengan desain elegan menggunakan **Tailwind CSS** dan **Font Awesome**.  
-Website ini menampilkan menu signature, testimoni pelanggan, hingga informasi kontak restoran.
+✨ Fitur Utama
 
----
+🏠 Dashboard / Hero Section: Tampilan awal menarik dengan informasi singkat tentang layanan.
 
-## ✨ Fitur Utama
-- 🎨 **Desain Responsif & Modern**: Dibangun dengan Tailwind CSS.
-- 🍱 **Halaman Menu Interaktif**: Setiap menu memiliki efek hover dengan tombol order.
-- 🥢 **Tentang Kami**: Informasi lengkap tentang filosofi dan kualitas Sushi Nami.
-- ⭐ **Testimoni Pelanggan**: Ulasan asli dengan rating bintang.
-- 📞 **Kontak & Jam Buka**: Mudah diakses langsung dari footer.
-- 📱 **Navigasi Interaktif**: Smooth scrolling + efek highlight pada menu aktif.
+📖 About Us: Penjelasan visi dan misi Sehat Diah Catering.
 
----
-## Cara Menjalankan
+🍽 Menu & Paket: Informasi lengkap menu harian dan paket catering.
 
-1. Clone repo ini:
-   `ash
-   git clone https://github.com/MatthewMarcelino/Nami-Sushi
+🎁 Promo: Diskon dan promo menarik bagi pelanggan.
+
+🚚 Pengiriman: Layanan pengiriman makanan cepat dan tepat waktu.
+
+⭐ Testimoni Pelanggan: Feedback asli dari pelanggan.
+
+🤝 Donasi & Kontak: Informasi donasi dan kontak mudah dijangkau.
+
+📱 Responsive Sidebar: Navigasi sidebar untuk mobile dengan animasi smooth.
+
+📌 Footer Lengkap: Informasi kontak, jam operasional, dan media sosial.
+
+🛠 Teknologi yang Digunakan
+
+HTML5
+
+Tailwind CSS
+
+Font Awesome
+
+Google Fonts: Poppins
+
+Vanilla JavaScript untuk interaktivitas menu mobile
+
+🚀 Cara Menjalankan
+
+Clone repo ini:
+
+git clone https://github.com/MatthewMarcelino/Sehat_Diah_Catering
+
+
+Buka folder project di code editor.
+
+Jalankan file index.html di browser.
+
+📸 Demo / Preview
